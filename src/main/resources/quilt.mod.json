@@ -1,18 +1,17 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "java.tfar",
+		"id": "xxlpackets",
 		"version": "${version}",
 		"metadata": {
 			"name": "XXLPackets",
 			"description": "Even Bigger Packet Size Limit.",
 			"contributors": {
-				"Lazul1ne": "Owner",
+				"Lazul1ne": "Maintainer",
 				"Tfarcenim": "Original Creator"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
 				"issues": "https://github.com/AbyssDweller/XXLPackets/issues",
 				"sources": "https://github.com/AbyssDweller/XXLPackets/tree/Quilt-1.19.x"
 			},
