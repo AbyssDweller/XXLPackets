@@ -1,0 +1,40 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "java.tfar",
+		"id": "xxlpackets",
+		"version": "1.0.4-1.19.x+1.19.4",
+		"metadata": {
+			"name": "XXLPackets",
+			"description": "Even Bigger Packet Size Limit.",
+			"contributors": {
+				"Lazul1ne": "Fork Maintainer",
+				"Tfarcenim": "Original Creator"
+			},
+			"contact": {
+				"issues": "https://github.com/AbyssDweller/XXLPackets/issues",
+				"sources": "https://github.com/AbyssDweller/XXLPackets/tree/Quilt-1.19.x"
+			},
+			"icon": "assets/example_mod/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.18.3-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=4.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.19"
+			}
+		]
+	},
+	"mixin": "xxlpackets.mixins.json"
+}

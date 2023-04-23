@@ -8,7 +8,7 @@
 			"name": "XXLPackets",
 			"description": "Even Bigger Packet Size Limit.",
 			"contributors": {
-				"Lazul1ne": "Maintainer",
+				"Lazul1ne": "Fork Maintainer",
 				"Tfarcenim": "Original Creator"
 			},
 			"contact": {
@@ -19,12 +19,12 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "tfar.xlpackets.ExampleMod"
+			
 		},
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.17.0-"
+				"versions": ">=0.18.3-"
 			},
 			{
 				"id": "quilted_fabric_api",
@@ -32,7 +32,7 @@
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.19.2"
+				"versions": ">=1.19"
 			}
 		]
 	},

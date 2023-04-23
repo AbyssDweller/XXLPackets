@@ -1,0 +1,10 @@
+
+[registry_sync]
+	# Message displayed for players joining with incompatible clients. Support strings and Minecraft's JSON text format.
+	# default: Unsupported (vanilla?) client!
+	#This server requires a modded client to join!
+	missing_registry_sync_message = "Unsupported (vanilla?) client!\nThis server requires a modded client to join!"
+	# Allows players with Fabric API to connect, as long as they have all required mods.
+	# default: true
+	support_fabric_api_protocol = true
+

@@ -1,0 +1,34 @@
+{
+  "mappings": {
+    "tfar/xlpackets/mixin/ClientboundCustomPayloadPacketMixin": {
+      "<init>(Lnet/minecraft/network/FriendlyByteBuf;)V": "Lnet/minecraft/class_2658;<init>(Lnet/minecraft/class_2540;)V",
+      "<init>(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/FriendlyByteBuf;)V": "Lnet/minecraft/class_2658;<init>(Lnet/minecraft/class_2960;Lnet/minecraft/class_2540;)V"
+    },
+    "tfar/xlpackets/mixin/CompressionDecoderMixin": {
+      "decode": "Lnet/minecraft/class_2532;decode(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V"
+    },
+    "tfar/xlpackets/mixin/PackeEncoderMixin": {
+      "encode": "Lnet/minecraft/class_2545;method_10838(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/class_2596;Lio/netty/buffer/ByteBuf;)V"
+    },
+    "tfar/xlpackets/mixin/PacketByteBufMixin": {
+      "readNbt()Lnet/minecraft/nbt/CompoundTag;": "Lnet/minecraft/class_2540;method_10798()Lnet/minecraft/class_2487;"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "tfar/xlpackets/mixin/ClientboundCustomPayloadPacketMixin": {
+        "<init>(Lnet/minecraft/network/FriendlyByteBuf;)V": "Lnet/minecraft/class_2658;<init>(Lnet/minecraft/class_2540;)V",
+        "<init>(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/FriendlyByteBuf;)V": "Lnet/minecraft/class_2658;<init>(Lnet/minecraft/class_2960;Lnet/minecraft/class_2540;)V"
+      },
+      "tfar/xlpackets/mixin/CompressionDecoderMixin": {
+        "decode": "Lnet/minecraft/class_2532;decode(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V"
+      },
+      "tfar/xlpackets/mixin/PackeEncoderMixin": {
+        "encode": "Lnet/minecraft/class_2545;method_10838(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/class_2596;Lio/netty/buffer/ByteBuf;)V"
+      },
+      "tfar/xlpackets/mixin/PacketByteBufMixin": {
+        "readNbt()Lnet/minecraft/nbt/CompoundTag;": "Lnet/minecraft/class_2540;method_10798()Lnet/minecraft/class_2487;"
+      }
+    }
+  }
+}
