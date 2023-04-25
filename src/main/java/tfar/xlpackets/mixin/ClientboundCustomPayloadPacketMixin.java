@@ -11,6 +11,6 @@ public class ClientboundCustomPayloadPacketMixin {
     @ModifyConstant(method = {"<init>(Lnet/minecraft/network/FriendlyByteBuf;)V","<init>(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/FriendlyByteBuf;)V"},
             constant = @Constant(intValue = 1048576))
     private int xlPackets(int old) {
-        return 2000000000;
+        return 2147483647;
     }
 }
