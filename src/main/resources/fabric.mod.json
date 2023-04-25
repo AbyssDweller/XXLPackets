@@ -10,8 +10,8 @@
     "Lazul1ne"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://modrinth.com/mod/xxl-packets",
+    "sources": "https://github.com/AbyssDweller/XXLPackets/tree/Fabric-1.19.x"
   },
 
   "license": "CC0-1.0",
