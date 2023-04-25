@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "xlpackets",
+  "id": "xxlpackets",
   "version": "${version}",
 
-  "name": "XLPackets",
-  "description": "Bigger Packet Size Limit",
+  "name": "XXLPackets",
+  "description": "Even Bigger Packet Size Limit",
   "authors": [
-    "Tfarecnim"
+    "Tfarecnim (Original Creator)",
+    "Lazul1ne"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -14,7 +15,7 @@
   },
 
   "license": "CC0-1.0",
-
+  "icon": "assets/xlpackets/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -25,8 +26,10 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.7.2",
-    "fabric": "*"
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": ">=1.18",
+    "java": ">=17"
   },
   "suggests": {
     "flamingo": "*"
