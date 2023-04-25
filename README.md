@@ -1,3 +1,5 @@
+![Version](https://img.shields.io/modrinth/v/SeCuopwJ) ![Game Versions](https://img.shields.io/modrinth/game-versions/SeCuopwJ) ![Downloads](https://img.shields.io/modrinth/dt/SeCuopwJ) ![Followers](https://img.shields.io/modrinth/followers/SeCuopwJ) 
+
 # Fabric Example Mod
 
 ## Setup
