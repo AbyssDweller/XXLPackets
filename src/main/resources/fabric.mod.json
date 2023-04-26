@@ -10,8 +10,8 @@
     "Lazul1ne"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://modrinth.com/mod/xxl-packets",
+    "sources": "https://github.com/AbyssDweller/XXLPackets/tree/Fabric-1.18.x"
   },
 
   "license": "CC0-1.0",
@@ -26,9 +26,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.9",
+    "fabricloader": ">=0.14.8",
     "fabric-api": "*",
-    "minecraft": ">=1.18",
+    "minecraft": "~1.18",
     "java": ">=17"
   },
   "suggests": {
