@@ -9,6 +9,6 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 public class PacketInflaterMixin {
 	@ModifyConstant(method = "decode",constant = @Constant(intValue = 8388608))
 	private int xlPackets(int old) {
-		return 2000000000;
+		return 2147483647;
 	}
 }

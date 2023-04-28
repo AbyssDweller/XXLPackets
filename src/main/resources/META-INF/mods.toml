@@ -17,7 +17,7 @@ modId="xlpackets" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 version="${file.jarVersion}" #mandatory
  # A display name for the mod
-displayName="XL Packets" #mandatory
+displayName="XXL Packets" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -25,10 +25,10 @@ displayName="XL Packets" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 #logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-#credits="Thanks for this example mod goes to Java" #optional
+credits="Thanks for this fork goes to Tfarecnim" #optional
 # A text field displayed in the mod UI
-authors="Tfarecnim" #optional
+authors="Tfarecnim, AbyssDweller" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Mod to help clients connect to servers with large datapacks
+"Even Bigger Packet Size Limit
 '''

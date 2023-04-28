@@ -10,6 +10,6 @@ public class SCustomPayloadPacketMixin {
 
     @ModifyConstant(method = {"<init>*"},constant = @Constant(intValue = 1048576))
     private int xlPackets(int constant) {
-        return 2000000000;
+        return 2147483647;
     }
 }

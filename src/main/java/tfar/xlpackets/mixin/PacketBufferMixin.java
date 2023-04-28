@@ -10,6 +10,6 @@ public class PacketBufferMixin {
 
     @ModifyConstant(method = "readNbt()Lnet/minecraft/nbt/CompoundTag;",constant = @Constant(longValue = 2097152L))
     private long xlPackets(long constant) {
-        return 2_000_000_000L;
+        return 2_147_483_647;
     }
 }
