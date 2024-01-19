@@ -1,32 +1,163 @@
-1.19.x Changelog
-45.2
+1.20.1 Changelog
+47.2
 ====
- - 45.2.0 1.19.4 RB 2
+ - 47.2.0 1.20.1 RB
+
+47.1
+====
+ - 47.1.47 Keep order of sources in PackRepository (#9702)
+           Co-authored-by: dhyces <10985914+dhyces@users.noreply.github.com>
+ - 47.1.46 Fix DelegatingPackResources searching resource path twice (#9697)
+ - 47.1.45 Fix `Level` leak in debug HUD (#9699)
+           Co-authored-by: malte0811 <malte0811@web.de>
+ - 47.1.44 Fix PlayerSpawnPhantomsEvent not being fired (#9689)
+ - 47.1.43 Enhance LivingBreathEvent and LivingDrownEvent. Closes #9680
+           Also remove 3.5MB of useless data from the installer.
+ - 47.1.42 Partially revert LazyOptional changes, now no longer internally uses weak references.
+ - 47.1.41 Make LazyOptional's internal references to invalidation listeners use WeakReference, and allow modders to unregister themselves. Closes #8805
+ - 47.1.40 Revert EntityEvent.Size changes to before #9018 was called. (#9679)
+           Kept newly added methods for binary compatibility but deprecated them all for removal.
+           The entire pose/eye/size system needs to be reevaluated and address some of Mojang's changes.
+           However this should fix any bugs that pulling that PR may of caused.
+ - 47.1.39 Add a config option to restore the calculate all normals behavior in case some setups require old broken behavior. (#9670)
+ - 47.1.38 Fix rounding errors on models with 45 degree normals by favoring one Direction (#9669)
+           Should fix flickering issues when breaking custom models and having our vanilla solution disabled.
+ - 47.1.37 Moved ForgeHooksClient.onCreativeModeTabBuildContents to ForgeHooks to fix #9662
+ - 47.1.36 Fix tag removal functionality that broke during the 1.19 update. Closes #9053 and #8949
+ - 47.1.35 Replace string with forge tag in vanilla recipes. Closes #9062
+ - 47.1.34 Fix new brain hooks not persisting active activities.
+ - 47.1.33 Fix breaking overlay flickering on campfires by using vanilla method to calculate block normals. (#9664)
+ - 47.1.32 Cleanup usages of static imports and build script so that our build doesn't spam useless error like messages.
+           So that it is easier to see real errors.
+           Add compatibility checking to standard testing tasks.
+ - 47.1.31 Added Action value to PlayerInteractEvent.LeftClickEvent to expose what action fired the event. #9175
+ - 47.1.30 Fix parameter names in IForgeDimensionSpecialEffects.adjustLightmapColors to better describe what they are. (#9656)
+ - 47.1.29 Re-add EntityEvent.Size methods to maintain bincompat
+ - 47.1.28 Added LivingMakeBrainEvent, to allow a consistent way for modders to manipulate entity Brains. #9292
+ - 47.1.27 Add LivingSwapHandItemsEvent
+ - 47.1.26 Fixed FluidUtil#tryFillContainer returning invalid result when simulating #9358
+ - 47.1.25 Re-add in-game mod menu (#9652)
+ - 47.1.24 Fix Entity eye height for multipart entities.
+ - 47.1.23 Fix conflicting keybindings not having the correct click count set. #9360
+ - 47.1.22 Fix the Emissive Rendering for Experimental Light Pipeline (#9651)
+ - 47.1.21 Fixed AdvancementsScreen.java.patch buttons not rendering (#9649)
+ - 47.1.20 Properly Handle Fluid Updates while in a Boat #9428
+ - 47.1.19 New hook in IClientBlockExtensions to handle enabling tinting on breaking particles. #9446
+ - 47.1.18 Fix invalid index when ticking itemstacks in a player nventory by adding a new onInventoryTick event. Closes #9453
+ - 47.1.17 Make the FireworkShapes enum extensible (Closes #9486)
+ - 47.1.16 Add `EmptyEnergyStorage` (#9487)
+ - 47.1.15 Support IPv6 address compression for logged IPs
+ - 47.1.14 Make item name rendering and status bar rendering respect additional gui overlays being rendered by mods (#9648)
+ - 47.1.13 Fix EyeHeight event being fired twice (#9647)
+ - 47.1.12 Add PlayerSpawnPhantomsEvent, utilized to block or forcefully allow PhantomSpawner to spawn phantoms (#9644)
+ - 47.1.11 Fix creative mode screen not correctly using CreativeModeTab::getTabsImage (#9627)
+ - 47.1.10 Add option to advertise dedicated servers to LAN.
+ - 47.1.9  Fix entity eye height loop.
+ - 47.1.8  Particle Description Data Provider.
+ - 47.1.7  Add LivingBreatheEvent and LivingDrownEvent (#9525)
+ - 47.1.6  Fix entity size event not being fired, changed it to split eye height and size calculations. (#9535)
+ - 47.1.5  AlterGroundEvent for modifying block placement performed by AlterGroundDecorator (#9637)
+ - 47.1.4  Change ProjectileHitEvent to return a result instead of being cancelable. Closes #9642
+ - 47.1.3  Replace static import with regular one to fix S2S and non-official mappings. (#9633)
+ - 47.1.2  Add missing null check for TagsProvider#existingFileHelper (#9638)
+ - 47.1.1  Add GuiGraphics helpers for blitNineSliced and blitRepeating that support specifying a custom texture size (#9641)
+ - 47.1.0  1.20.1 Recommended Build
+
+47.0
+====
+ - 47.0.50 Fix FMLOnly loading. Closes #9609
+ - 47.0.49 Improve logging for server connections (#9618)
+ - 47.0.48 Fix placing fluids into waterlogged blocks with FluidUtil::tryPlaceFluid. To behave more like vanilla MC-127110 (#9586)
+ - 47.0.47 Expose loaded RegistryAccess through AddReloadListenerEvent (#9613)
+ - 47.0.46 Fix GLM applying to entities when killed. Closes #9551
+ - 47.0.45 Add unordered creative tabs after vanilla and perform a second level sorting of tabs by registry name to ensure tabs are ordered the same between game restarts (#9612)
+ - 47.0.44 Fix Early Loading window FPS snafu where it could spam (#9619)
+           unlimited screen updates. Probably a good way to gently toast an ancient laptop.
+ - 47.0.43 Make overloads consistent for defineListAllowEmpty in ForgeConfigSpec.Builder (#9604)
+ - 47.0.42 Moved GameShuttingDownEvent hook to DedicatedServer class. Fixes #9601
+ - 47.0.41 Fix PitcherCropBlock not calling canSustainPlant, not allowing it to be placed on custom farmland. Close #9611
+ - 47.0.40 Add null check to NetworkHooks.openScreen. Closes #9597
+ - 47.0.39 Fix ShieldBlockEvent not correctly performing damaged functions when not all damage is blocked. (#9615)
+ - 47.0.38 Add IP address to client disconnect message. Closes #9603
+ - 47.0.37 Fix hotbar items not dimming when sleeping in bed. Closes #9616
+ - 47.0.36 Bump Eventbus to address NullPointerException when classloading things on some threads. Closes #9570
+ - 47.0.35 Try and be a bit nicer about handling bad [feature] definitions  (#9606)
+           * Try and be a bit nicer about handling bad [feature] definitions - they're single square bracket defined and require strings for feature bound values.
+           * Some more tweaks to the feature system to output useful and well formatted error messages when bounds fail. Requires SPI 7.0.1 and the language string "fml.modloading.feature.missing" has changed.
+           * Use immutable lists where possible and generally tidy things a bit
+ - 47.0.34 [HotFix]: Somehow not caught by CI, but there was an issue in the SpawnUtils to handle.
+ - 47.0.33 Remove amount from FluidStack hashCode to fix the equal/hashCode java contract (#9602)
+ - 47.0.32 Add example usage for configs to the MDK (#9596)
+           Demonstrates proper usage of different config value types, validation, transformation/parsing, load/reload handling and direct field access.
+ - 47.0.31 Demonstrate configureEach in run configs (#9594)
+ - 47.0.30 Reduce verbosity of prepareRuns doc in MDK (#9593)
+ - 47.0.29 Lazily configure MDK tasks, improve IDE support (#9592)
+ - 47.0.28 Fix not dropping xp for player sourced explosions and various other cases when xp should drop (#9588)
+ - 47.0.27 add item handler capability to chiseled bookshelf (#9587)
+ - 47.0.26 Fix ignoring maxUpStep method overrides on entities (#9583)
+ - 47.0.25 Add missing damage type tag provider modid, existing file helper constructor overload (#9581)
+ - 47.0.24 Expose holder lookup registry provider as a helper in RegistriesDatapackGenerator (#9580)
+ - 47.0.23 Fix gametest collection causing secondary crash in loading error state (#9568)
+ - 47.0.22 Fix SpriteCoordinateExpander not working with chained methods (MC-263524) (#9564)
+ - 47.0.21 Expose EntityRendererProvider.Context to AddLayers event (#9562)
+ - 47.0.20 [1.20] Add events for checking spawn conditions (SpawnPlacementCheck and PositionCheck) (#9469)
+ - 47.0.19 Another tweak to the early display. We start a timer process while we create the window, in case it hangs. Also add a skip version config, to try and help in cases where the driver is stupid. (#9595)
+ - 47.0.18 Auto generate names for modded loot pools. Fixes #9589 (#9591)
+ - 47.0.17 More tweaks to the mod loading callbacks to make loading bars work better (#9585)
+ - 47.0.16 Reimplement LootPool name patches and hooks (#9573)
+ - 47.0.15 Fix experimental lighting pipeline breaking vanilla's emissive rendering. Closes #9552 (#9582)
+ - 47.0.14 Update early loading default configs to match standard expectations. (#9577)
+           Also allow a global override env variable for darkmode always. "FML_EARLY_WINDOW_DARK"
+ - 47.0.13 Add proper duplicate mod error message that includes the mod id(s) and mod files. (#9474)
+ - 47.0.12 Add missing stack tooltip rendering hooks (#9533)
+           Fix automatic tooltip wrapping discarding empty lines used as spacers
+ - 47.0.11 Add piston push reaction overrides to Block class (#9538)
+ - 47.0.10 Fix missing calls to level-sensitive block SoundType getter (#9553)
+ - 47.0.9  Fix forge registries that have wrappers/support tags not being in the HolderLookup Provider that is provided to the GatherDataEvent (#9566)
+ - 47.0.8  Make IItemDecorator a functional interface again. Fixes #9563 (#9574)
+ - 47.0.7  Make 1.20.x the main TC branch.
+ - 47.0.6  Fix custom geometry in parent models not being resolved (#9572)
+ - 47.0.5  Make the scheduled thread factory setDaemon on it's threads. Should allow things to close properly if something deadly happens early on. (#9575)
+ - 47.0.4  This is an early display window system for forge. (#9558)
+ - 47.0.3  fix the JIJ break by bumping SJH. apologies.
+ - 47.0.2  update libs (#9565)
+ - 47.0.1  Update Armor Layer Implementation to Match Vanilla (#9547)
+ - 47.0.0  1.20.1 Update
+
+46.0
+====
+ - 46.0.14 Fix JAR compatibility checks for 1.20 (#9556)
+ - 46.0.13 [1.20] Add `AFTER_LEVEL` render level stage (#9555)
+ - 46.0.12 Reorder overlay layers to match vanilla (#9550)
+ - 46.0.11 Re-implement missing level-sensitive block light hook in ChunkAccess (#9536)
+ - 46.0.10 Fix issues in the deserialization of empty ingredients (#9537)
+ - 46.0.9  Fix wrong variable passed into EnchantmentClue lookup Fixes #9543 (#9544)
+ - 46.0.8  Fix incorrect depth test state in debug graph rendering Fixes #9534 (#9539)
+ - 46.0.7  Fix initCapabilities patch location in ServerLevel Fixes #9526 (#9531)
+ - 46.0.6  Use Spinning Effect Intensity instead of Partial Tick for Portal Overlay Fixes #9529 (#9530)
+ - 46.0.5  Fix getArmorModelHook patch, Fixex #9523 (#9528)
+ - 46.0.4  Fix duplicate Map writes in PlayerList patch. (#9521)
+ - 46.0.3  Fix Forge Version including MC version in MDK.
+ - 46.0.2  Fix patch in light propagation (#9532)
+ - 46.0.1  Attempt to fix jar signing
+           Gradle 8 is stupid and doesn't (easily) allow in-place tasks, so a temporary fix has been made in ForgeGradle 6
+ - 46.0.0  Forge 1.20
+           - Creative mode tabs are now a registry; the `BuildContents` event was renamed to `BuildCreativeModeTabContentsEvent` and moved it to its own class
+           - The pack format is now 15 for both resource packs and data packs
+           - `ScreenUtils` was deprecated in favor of a `GuiGraphics` extension
+           - Forge and the MDK were updated to Gradle 8 and FG6
+           - The Forge common config file was removed (it only contained the deprecated old fields for resource caching, which was removed in 1.19.3)
+           - Registry dummy entries were removed
+           - `RemappingVertexPipeline` was fixed to forward the `endVertex()` call
+           - Forge tool tags were removed in favor of vanilla ones
+           Co-authored-by: ChampionAsh5357 <ash@ashwork.net>
+           Co-authored-by: coehlrich <coehlrich@users.noreply.github.com>
+           Co-authored-by: Dennis C <11262040+XFactHD@users.noreply.github.com>
+           Co-authored-by: Matyrobbrt <matyrobbrt@gmail.com>
 
 45.1
 ====
- - 45.1.19 Fix `Level` leak in debug HUD (#9700)
-           Co-authored-by: malte0811 <malte0811@web.de>
- - 45.1.18 Keep order of sources in PackRepository (#9703)
-           Co-authored-by: dhyces <10985914+dhyces@users.noreply.github.com>
- - 45.1.17 Fix DelegatingPackResources searching resource path twice (#9698)
- - 45.1.16 Fix parameter names in IForgeDimensionSpecialEffects.adjustLightmapColors to better describe what they are. (#9657)
- - 45.1.15 Add mods button to pause menu (#9654)
- - 45.1.14 Fixed FluidUtil#tryFillContainer returning invalid result when simulating #9358
- - 45.1.13 Fix conflicting keybindings not having the correct click count set. #9360
- - 45.1.12 Fixed AdvancementsScreen.java to render next/previous page buttons now. (#9650)
- - 45.1.11 Properly Handle Fluid Updates while in a Boat Fix #9256 (#9428)
- - 45.1.10 New hook in IClientBlockExtensions to handle enabling tinting on breaking particles. #9446
- - 45.1.9  Add `EmptyEnergyStorage` (#9487)
- - 45.1.8  Support IPv6 address compression for logged IPs
- - 45.1.7  Add option to advertise dedicated servers to LAN. (#9502)
- - 45.1.6  Add particle description data provider (#9510)
- - 45.1.5  AlterGroundEvent for modifying block placement performed by AlterGroundDecorator (#9636)
- - 45.1.4  Improve logging for server connections (#9622)
- - 45.1.3  Fix placing fluids into waterlogged blocks with FluidUtil::tryPlaceFluid. To behave more like vanilla MC-127110 (#9519)
- - 45.1.2  Add proper duplicate mod error message that includes the mod id(s) and mod files. (#9474)
- - 45.1.1  Make 1.20.x the main TC branch.
- - 45.1.0  1.19.4 Recommended Build
+ - 45.1.0 1.19.4 Recommended Build
 
 45.0
 ====
