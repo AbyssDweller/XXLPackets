@@ -27,7 +27,7 @@ logoFile="icon.png" #optional
 # A text field displayed in the mod UI
 credits="Thanks for this fork goes to Tfarecnim" #optional
 # A text field displayed in the mod UI
-authors="Tfarecnim, AbyssDweller" #optional
+authors="Tfarecnim, Lazul1ne" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 Even Bigger Packet Size Limit

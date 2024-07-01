@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(CompressionDecoder.class)
 public class PacketInflaterMixin {
-	@ModifyConstant(method = "decode",constant = @Constant(intValue = 8388608))
+	@ModifyConstant(method = "decode",constant = @Constant(intValue = CompressionDecoder.MAXIMUM_UNCOMPRESSED_LENGTH))
 	private int xlPackets(int old) {
-		return 2147483647;
+		return 2_147_483_647;
 	}
 }
